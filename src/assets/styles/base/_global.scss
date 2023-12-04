@@ -38,24 +38,3 @@ body {
   background-size: cover;
 
 }
-
-.container {
-  width: 100%;
-
-  @include media-query(tablet) {
-    max-width: 768px;
-  }
-
-  @include media-query(laptop) {
-    max-width: 1024px;
-  }
-
-  @include media-query(desktop) {
-    max-width: 1440px;
-  }
-}
-
-.center {
-  margin-right: auto;
-  margin-left: auto;
-}

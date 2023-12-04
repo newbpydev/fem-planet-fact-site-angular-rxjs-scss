@@ -1,20 +1,33 @@
-/* ------------------------------- Media Query ------------------------------ */
-@mixin media-query($breakpoint: tablet) {
-  @if $breakpoint ==tablet {
-    @media screen and (min-width:48em) {
-      @content;
-    }
-  }
+ /* -------------------------------------------------------------------------- */
+ /*                                 Media Query                                */
+ /* -------------------------------------------------------------------------- */
+ @mixin media-query($breakpoint: tablet) {
 
-  @else if $breakpoint ==desktop {
-    @media screen and (min-width: 90em) {
-      @content;
-    }
-  }
+   /* --------------------------------- Tablet --------------------------------- */
+   @if $breakpoint ==tablet {
+     @media screen and (min-width:48em) {
+       @content;
+     }
+   }
 
-  @else {
-    @media screen and (min-width: $breakpoint) {
-      @content;
-    }
-  }
-}
+   /* --------------------------------- Laptop --------------------------------- */
+   @else if $breakpoint ==laptop {
+     @media screen and (min-width: 64em) {
+       @content;
+     }
+   }
+
+   /* --------------------------------- Desktop -------------------------------- */
+   @else if $breakpoint ==desktop {
+     @media screen and (min-width: 90em) {
+       @content;
+     }
+   }
+
+   /* ------------------------------ Custom Query ------------------------------ */
+   @else {
+     @media screen and (min-width: $breakpoint) {
+       @content;
+     }
+   }
+ }

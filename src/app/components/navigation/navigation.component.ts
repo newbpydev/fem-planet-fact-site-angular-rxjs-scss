@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   template: `
     <nav class="navigation">
       <ul class="navigation__list">
         @for (link of links; track $index) {
         <li class="navigation__list-item">
-          <a class="navigation__link" href="">
+          <a class="navigation__link" routerLink="">
             <div class="navigation__link-group">
               <span class="navigation__link-icon"></span>
               <span class="navigation__link-text">
